@@ -3,7 +3,7 @@ import 'package:bibliaexplica/features/bible/data/models/book.dart';
 // import 'package:bibliaexplica/features/bible/data/models/verse.dart';
 import 'package:bibliaexplica/features/bible/domain/repositories/books_repository.dart';
 
-class BooksRepositoryImpl extends BooksRepository {
+class BooksRepositoryImpl implements BooksRepository {
   final db = BibleDatabase.instance.database;
 
   @override

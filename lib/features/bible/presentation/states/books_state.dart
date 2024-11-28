@@ -2,7 +2,7 @@ import 'package:bibliaexplica/features/bible/data/models/book.dart';
 
 sealed class BooksState {}
 
-class InitialProductsState extends BooksState {}
+class InitialBooksState extends BooksState {}
 
 class SuccessBooksState extends BooksState {
   final List<Book> books;

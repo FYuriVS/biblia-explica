@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class BooksStore extends ValueNotifier<BooksState> {
   final BooksRepository booksRepository;
 
-  BooksStore(this.booksRepository) : super(InitialProductsState());
+  BooksStore(this.booksRepository) : super(InitialBooksState());
 
   Future<void> getBooks() async {
     value = LoadingBooksState();

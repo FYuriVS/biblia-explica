@@ -41,14 +41,18 @@ class _BooksPageState extends State<BooksPage> {
                     itemBuilder: (context, index) {
                       final book = value.books[index];
                       return ListTile(
-                        title: Text(book.name),
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ChaptersPage(bookId: book.id),
-                          ),
-                        ),
-                      );
+                          title: Text(book.name),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ChaptersPage(
+                                  bookId: book.id,
+                                  bookName: book.name,
+                                ),
+                              ),
+                            );
+                          });
                     },
                   );
                 } else {
