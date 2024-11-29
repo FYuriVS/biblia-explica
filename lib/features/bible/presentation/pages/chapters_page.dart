@@ -42,10 +42,10 @@ class _ChaptersPageState extends State<ChaptersPage> {
                 ? GridView.builder(
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3, // Define 3 colunas
+                      crossAxisCount: 3,
                       crossAxisSpacing: 8.0,
                       mainAxisSpacing: 8.0,
-                      childAspectRatio: 1.0, // Mantém os cards quadrados
+                      childAspectRatio: 1.0,
                     ),
                     itemCount: value.chapters.length,
                     itemBuilder: (context, index) {
@@ -56,9 +56,11 @@ class _ChaptersPageState extends State<ChaptersPage> {
                         },
                         child: Container(
                           decoration: BoxDecoration(
+
                             color: Theme.of(context).colorScheme.primary,
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(22.0),
                           ),
+
                           child: Center(
                             child: Text(
                               'Capítulo $chapter',
