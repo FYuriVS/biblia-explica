@@ -44,28 +44,23 @@ class _VersesPageState extends State<VersesPage> {
                 final verse = value.verses[index];
                 return Card(
                   child: ListTile(
-                    contentPadding:
-                        const EdgeInsets.all(8.0), // Add padding to ListTile
+                    contentPadding: const EdgeInsets.all(8.0),
                     title: Row(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start, // Align items at the top
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Align(
                           alignment: Alignment.topLeft,
                           child: CircleAvatar(
-                            radius: 18, // Set a fixed radius
+                            radius: 18,
                             child: Text('${verse.number}'),
                           ),
                         ),
-                        const SizedBox(
-                            width: 10), // Space between avatar and text
-                        // Use Flexible to allow text to take the remaining space
+                        const SizedBox(width: 10),
                         Flexible(
                           child: Text(
                             verse.text,
                             style: const TextStyle(fontSize: 16),
-                            maxLines:
-                                null, // Allow the text to wrap to multiple lines
+                            maxLines: null,
                           ),
                         ),
                       ],
