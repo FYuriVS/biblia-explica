@@ -1,9 +1,11 @@
+import 'package:bibliaexplica/features/bible/data/models/verse.dart';
+
 sealed class VersesState {}
 
 class InitialVersesState extends VersesState {}
 
 class SuccessVersesState extends VersesState {
-  final List<int> verses;
+  final List<Verse> verses;
   SuccessVersesState(this.verses);
 }
 

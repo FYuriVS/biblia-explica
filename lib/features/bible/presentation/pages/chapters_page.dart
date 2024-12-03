@@ -1,4 +1,5 @@
 import 'package:bibliaexplica/application.dart';
+import 'package:bibliaexplica/features/bible/presentation/pages/verses_page.dart';
 import 'package:bibliaexplica/features/bible/presentation/states/chapters_state.dart';
 import 'package:bibliaexplica/features/bible/presentation/stores/chapters_store.dart';
 import 'package:flutter/material.dart';
@@ -52,15 +53,21 @@ class _ChaptersPageState extends State<ChaptersPage> {
                       final chapter = value.chapters[index];
                       return GestureDetector(
                         onTap: () {
-                          // Navegar para a página do capítulo
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => VersesPage(
+                                bookId: widget.bookId,
+                                chapterId: value.chapters[index],
+                              ),
+                            ),
+                          );
                         },
                         child: Container(
                           decoration: BoxDecoration(
-
                             color: Theme.of(context).colorScheme.primary,
                             borderRadius: BorderRadius.circular(22.0),
                           ),
-
                           child: Center(
                             child: Text(
                               'Capítulo $chapter',
@@ -75,11 +82,13 @@ class _ChaptersPageState extends State<ChaptersPage> {
                       );
                     },
                   )
-                : value is LoadingChaptersState ? const Center(
-                  child: CircularProgressIndicator(),
-                ) : const Center(
-              child: Text("data"),
-            ),
+                : value is LoadingChaptersState
+                    ? const Center(
+                        child: CircularProgressIndicator(),
+                      )
+                    : const Center(
+                        child: Text("data"),
+                      ),
           );
         },
       ),

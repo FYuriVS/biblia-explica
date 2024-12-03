@@ -5,8 +5,8 @@ class VersesDatasource {
 
   VersesDatasource(this.db);
 
-  @override
-  Future<List<Map<String, dynamic>>> fetchVerses(int bookId, int chapter) async {
+  Future<List<Map<String, dynamic>>> fetchVerses(
+      int bookId, int chapter) async {
     final database = await db;
 
     // Consulta com parâmetros bookId e chapter.

@@ -1,4 +1,3 @@
-import 'package:bibliaexplica/application.dart';
 import 'package:bibliaexplica/features/bible/data/datasources/chapters_datasource.dart';
 import 'package:bibliaexplica/features/bible/domain/repositories/chapters_repository.dart';
 

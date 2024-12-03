@@ -13,8 +13,8 @@ class Verse {
   factory Verse.fromMap(Map<String, dynamic> map) {
     return Verse(
       id: map['id'],
-      chapterId: map['chapter_id'],
-      number: map['number'],
+      chapterId: map['chapter'],
+      number: map['verse'],
       text: map['text'],
     );
   }

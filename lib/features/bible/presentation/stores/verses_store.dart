@@ -1,4 +1,4 @@
-import 'package:bibliaexplica/features/bible/presentation/states/chapters_state.dart';
+import 'package:bibliaexplica/features/bible/domain/repositories/verses_repository.dart';
 import 'package:flutter/material.dart';
 
 import '../states/verses_state.dart';
@@ -8,12 +8,12 @@ class VersesStore extends ValueNotifier<VersesState> {
 
   VersesStore(this.versesRepository) : super(InitialVersesState());
 
-  Future<void> getChapters(int bookId) async {
+  Future<void> getVerses(int bookId, int chapterId) async {
     value = LoadingVersesState();
     try {
-      final response = await chaptersRepository.getChapters(bookId);
+      final response = await versesRepository.getVerses(bookId, chapterId);
       if (response.isEmpty) {
-        value = ErrorVersesState("Nenhum livro encontrado");
+        value = ErrorVersesState("Nenhum versículo encontrado");
         return;
       }
       value = SuccessVersesState(response);
