@@ -4,11 +4,12 @@ class Verse {
   final int number;
   final String text;
 
-  Verse(
-      {required this.id,
-      required this.chapterId,
-      required this.number,
-      required this.text});
+  Verse({
+    required this.id,
+    required this.chapterId,
+    required this.number,
+    required this.text,
+  });
 
   factory Verse.fromMap(Map<String, dynamic> map) {
     return Verse(

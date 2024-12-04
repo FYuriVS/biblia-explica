@@ -72,7 +72,7 @@ class _VersesPageState extends State<VersesPage> {
           }
           if (value is LoadingVersesState) {
             return const Center(
-              child: Text("Carregando..."),
+              child: CircularProgressIndicator(),
             );
           } else {
             return const Center(

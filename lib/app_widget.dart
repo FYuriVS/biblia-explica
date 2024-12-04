@@ -3,7 +3,7 @@ import 'package:bibliaexplica/core/ui/resources/theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:bibliaexplica/features/bible/presentation/pages/books_page.dart';
 import 'package:bibliaexplica/features/home/home_page.dart';
-import 'package:bibliaexplica/features/notes/notes_page.dart';
+import 'package:bibliaexplica/features/notes/presentation/pages/notes_page.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({super.key});
@@ -21,7 +21,7 @@ class _AppWidgetState extends State<AppWidget> {
   static final List<Widget> _pages = [
     const HomePage(),
     const BooksPage(),
-    const NotesPage(),
+    NotesPage(),
   ];
 
   void _onTabSelected(int index) {
